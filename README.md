@@ -1,6 +1,8 @@
-## docker-blueiris
+## docker-mizupbx
 
-This is a Container for BlueIris based on [solarkennedy/wine-x11-novnc-docker
+This is a Container for Mizupbx based on [jshridha/docker-blueiris
+](https://github.com/jshridha/docker-blueiris) and
+[solarkennedy/wine-x11-novnc-docker
 ](https://github.com/solarkennedy/wine-x11-novnc-docker)
 
 This container runs:
@@ -10,16 +12,7 @@ This container runs:
 * [noNVC](https://kanaka.github.io/noVNC/) - A HTML5 canvas vnc viewer
 * Fluxbox - a small window manager
 * WINE - to run Windows executables on linux
-* blueiris.exe - official Windows BlueIris
+* mizuPBX.exe - official Windows MizuPbx
 
-```
-docker run -d \
-  --name="BlueIris" \
-  -p novnc-port:8080 \
-  -p vnc-port:5900 \
-  -p blueiris-webserver-port:81 \
-  -v /path/to/data:/root/prefix32:rw \
-  jshridha/blueiris
-  ```
-# Known Issues:
-* Saving and restoring settings backup via the BlueIris interface does not work!
+clone the repo and use docker-compose to start
+

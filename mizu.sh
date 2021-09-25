@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MIZU_EXE="/root/prefix32/drive_c/Program Files/MizuPPBX/MizuManage.exe"
+MIZU_EXE="/root/prefix32/drive_c/Program Files/MizuPBX/MizuManage.exe"
 PREFIX_DIR="/root/prefix32"
 INSTALL_EXE="/root/MizuWinPBX_Setup.exe"
 

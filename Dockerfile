@@ -1,4 +1,4 @@
-FROM phusion/baseimage:master
+FROM phusion/baseimage:bionic-1.0.0
 MAINTAINER jshridha
 
 # Set correct environment variables
@@ -21,15 +21,12 @@ ENV WINEPREFIX /root/prefix32
 ENV WINEARCH win32
 ENV DISPLAY :0
 
+
 # Install wine
 RUN \
  dpkg --add-architecture i386 && \
- #wget -nc https://dl.winehq.org/wine-builds/Release.key && \
- #apt-key add Release.key && \
- apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ && \
- apt-get update && \
- apt-get -y install --allow-unauthenticated --install-recommends winehq-devel wine-mono wine-gecko
-
+ apt update -y && \
+ apt install wine64 wine32 -y
 RUN \
  cd /usr/bin/ && \
  wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks && \

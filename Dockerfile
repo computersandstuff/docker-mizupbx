@@ -37,8 +37,8 @@ RUN \
  sh winetricks corefonts wininet
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-ADD blueiris.sh /root/blueiris.sh
-RUN chmod +x /root/blueiris.sh
+ADD mizu.sh /root/mizu.sh
+RUN chmod +x /root/mizu.sh
 
 RUN mv /root/prefix32 /root/prefix32_original && \
     mkdir /root/prefix32

@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:master
 MAINTAINER jshridha
 
 # Set correct environment variables
@@ -24,8 +24,8 @@ ENV DISPLAY :0
 # Install wine
 RUN \
  dpkg --add-architecture i386 && \
- wget -nc https://dl.winehq.org/wine-builds/Release.key && \
- apt-key add Release.key && \
+ #wget -nc https://dl.winehq.org/wine-builds/Release.key && \
+ #apt-key add Release.key && \
  apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ && \
  apt-get update && \
  apt-get -y install --allow-unauthenticated --install-recommends winehq-devel wine-mono wine-gecko

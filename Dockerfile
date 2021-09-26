@@ -44,6 +44,6 @@ WORKDIR /root/
 ADD novnc /root/novnc/
 
 # Expose Port
-EXPOSE 8080
+EXPOSE 8042
 
 CMD ["/usr/bin/supervisord"]

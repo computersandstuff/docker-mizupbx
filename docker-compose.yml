@@ -10,4 +10,4 @@ services:
       - "80:80"  # Mizu API
       - "8080:8080" # NoVnc Port
       - "5900:5900" # VNC Port
-      
+    network_mode: "host" # this is best as there is no need for forwarding VOIP ports
